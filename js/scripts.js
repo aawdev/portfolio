@@ -180,11 +180,11 @@
 			
 		}
 		function disableButtons(url) {
-			// if (url == count) {
-			// 		$('.section-nav a.forward').addClass('disabled');
-			//  	$('.section-nav a.backward').removeClass('disabled');
-			// } else 
-			if (url == 1) {
+			if (url == count) {
+				// $('.section-nav a.forward').addClass('disabled');
+			 	// $('.section-nav a.backward').removeClass('disabled');
+				 url = 1;
+			} else if (url == 1) {
 				$('.section-nav a.backward').addClass('disabled');
 				$('.section-nav a.forward').removeClass('disabled');
 			} else {
@@ -198,11 +198,11 @@
 				$this.attr({ href: '#section' + url });
 				$this.parent('nav').attr({ class: 'section' + url });
 
-				if (url == count.length) {
-					url = 1;
-					$this.attr({ href: '#section' + url });
-					$this.parent('nav').attr({ class: 'section' + url });
-				}
+				// if (url == count) {
+				// 	url = 1;
+				// 	$this.attr({ href: '#section' + url });
+				// 	$this.parent('nav').attr({ class: 'section' + url });
+				// }
 			} else if ($type == 'backward') {
 				url = url-1;
 				$this.attr({ href: '#section' + url });
