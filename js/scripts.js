@@ -163,7 +163,7 @@
 		/*==========  Horizontal Scroll  ==========*/
 		var hash = window.location.hash;
 		var url = 1;
-		var count = $('.sections-wrapper section').length;
+		var count = $('.sections-wrapper > section').length;
 		if (location.hash) {
 			setTimeout(function() {
 				window.scrollTo(0, 0);
@@ -176,10 +176,15 @@
 			$('.sections-wrapper > section').css('width', vWidth);
 			$('.sections-wrapper').css('width', vWidth * count).css('height', $('.sections-wrapper section.active').outerHeight());
 		}
+		function restartSectionCount(url) {
+			
+		}
 		function disableButtons(url) {
 			if (url == count) {
-				$('.section-nav a.forward').addClass('disabled');
-				$('.section-nav a.backward').removeClass('disabled');
+				// $('.section-nav a.forward').addClass('disabled');
+				// $('.section-nav a.backward').removeClass('disabled');
+				// instead of disabiling button restart the counter and go back to section 1
+				$('.section-nav a.forward').attr({ href: '#section1'});
 			} else if (url == 1) {
 				$('.section-nav a.backward').addClass('disabled');
 				$('.section-nav a.forward').removeClass('disabled');
