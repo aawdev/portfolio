@@ -2774,7 +2774,7 @@ textarea:focus {
 }
 
 #section1 .button-row a.button i {
-    margin: 0 5px;
+    margin: 0 5px 0 0;
 }
 
 .dl-resume {
