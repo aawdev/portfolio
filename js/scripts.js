@@ -197,7 +197,7 @@
 				$this.parent('nav').attr({ class: 'section' + url });
 
 				if (url == count) {
-					url = 1;
+					url = 0;
 				}
 			} else if ($type == 'backward') {
 				url = url-1;
