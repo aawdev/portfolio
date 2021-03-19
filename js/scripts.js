@@ -178,7 +178,7 @@
 		}
 		function disableButtons(url) {
 			// if (url == count) {
-			// 	// $('.section-nav a.forward').addClass('disabled');
+			// 		// $('.section-nav a.forward').addClass('disabled');
 			//  	// $('.section-nav a.backward').removeClass('disabled');
 			// 	 url = 1;
 			// } else
@@ -198,7 +198,6 @@
 
 				if (url == count) {
 					url = 1;
-					$this.attr({ href: '#section' + url });
 				}
 			} else if ($type == 'backward') {
 				url = url-1;
